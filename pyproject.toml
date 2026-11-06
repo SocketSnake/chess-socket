@@ -1,0 +1,11 @@
+[project]
+name = "chess-socket"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "И Горь", email = "ibrahim020576@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
