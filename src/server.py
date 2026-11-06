@@ -12,4 +12,14 @@ class Server:
 
 
     def send_data(self):
-        pass
+        conn, addr = self.server_socket.accept()
+        while True:
+            print(f"Клиент {addr}, подключился")
+            data = conn.recv(1024)
+            if not data:
+                break
+            print(f"Клиент отправил сообщение: {data.decode('utf-8')}")
+
+            conn.sendall(f"Привет твое сообщение:\n{data.encode('utf-8')}")
+
+            self.server_socket.close()
