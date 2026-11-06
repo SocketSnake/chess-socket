@@ -10,8 +10,10 @@ class Server:
         
         self.server_socket.listen(5)
 
+    def get_server_data(self):
+        pass
 
-    def send_data(self):
+    def send_server_data(self):
         conn, addr = self.server_socket.accept()
         while True:
             print(f"Клиент {addr}, подключился")
